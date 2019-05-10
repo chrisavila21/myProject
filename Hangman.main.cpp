@@ -91,9 +91,11 @@ int main()
 			game.PrintMessage("GAME OVER");
 			PlayerRecords.incrementLosses(currentPlayer);
 
-			cout << "\nThe word was : " << wordToGuess;
+			cout << "\nThe word was : " << wordToGuess << endl << endl;
+
 		}
-		getchar();
+		
+		PlayerRecords.displayPlayer(currentPlayer);
 
 		//play again? same player?
 		cout << "\n***************************************************************"
@@ -162,3 +164,5 @@ char YorN(char& tchoice)
 	cin.ignore();
 	return tchoice;
 }
+
+
