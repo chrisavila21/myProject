@@ -14,6 +14,7 @@ Nathan Jaggers
 II. File list
 ----------
 BigWordFile.txt \            Large text file that holds various words for hangman \
+Condensed Project File.cpp\  Holds all code to run program in one file \
 Design.cpp \                 Class that declares and defines functions for how the game will work \
 Hangman.main.cpp \           main.cpp file - runs game \
 Player.cpp \                 Holds implementation for class called player as well as related functions\
