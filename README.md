@@ -13,14 +13,15 @@ Nathan Jaggers
 
 II. File list
 ----------
-Design.cpp -                 Class that declares and defines functions for how the game will work 
-Hangman.main.cpp -           main.cpp file - runs game 
-Player.cpp -                 Holds implementation for class called player as well as related functions
-Player.h -                   Holds declaration for class called player as well as related functions
-PlayerLinkedList.cpp -       Holds implementation for Linked list of Player objects as well as functions
-PlayerLinkedList.h -         Holds declaration for Linked list of Player objects as well as functions
-README.txt -                 This file
-Words.txt -                  Holds hangman words
+BigWordFile.txt \            Large text file that holds various words for hangman \
+Design.cpp \                 Class that declares and defines functions for how the game will work \
+Hangman.main.cpp \           main.cpp file - runs game \
+Player.cpp \                 Holds implementation for class called player as well as related functions\
+Player.h \                   Holds declaration for class called player as well as related functions\
+PlayerLinkedList.cpp \       Holds implementation for Linked list of Player objects as well as functions\
+PlayerLinkedList.h \         Holds declaration for Linked list of Player objects as well as functions\
+README.txt \                 This file\
+Words.txt                    Holds hangman words 
 
 III. Design
 ----------
