@@ -7,9 +7,9 @@ ComSci-165-8271
 
 I. Authors
 ------------
-Chris Avila
-Patrick DeMers
-Nathan Jaggers
+Chris Avila \
+Patrick DeMers \
+Nathan Jaggers \
 
 II. File list
 ----------
