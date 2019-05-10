@@ -21,7 +21,7 @@ Player.h \                   Holds declaration for class called player as well a
 PlayerLinkedList.cpp \       Holds implementation for Linked list of Player objects as well as functions\
 PlayerLinkedList.h \         Holds declaration for Linked list of Player objects as well as functions\
 README.txt \                 This file\
-Words.txt                    Holds hangman words 
+Words.txt \                  Holds hangman words 
 
 III. Design
 ----------
