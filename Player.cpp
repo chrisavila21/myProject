@@ -1,13 +1,3 @@
- //*****************
-//Program Name:
-//Author: Nathan Jaggers
-//IDE Used: cloud9 (change if necessary)
-//Cloud9 username: nathanj8
-//Cloud9 workspace name: happy_fun_coding_time
-//Cloud9 folder: 
-//Cloud9 C++ file: 
-//Program description: one-sentence summary of what your program does
-//******************************************************************************
 #include <iostream>
 #include "Player.h"
 using namespace std;
