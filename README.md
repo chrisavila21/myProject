@@ -9,7 +9,7 @@ I. Authors
 ------------
 Chris Avila \
 Patrick DeMers \
-Nathan Jaggers \
+Nathan Jaggers 
 
 II. File list
 ----------
