@@ -1,0 +1,16 @@
+main: Condensed Project File.o  Design.o  Player.o  PlayerLinkedList.o
+    gcc -o Hangman.main Condensed Project File.o  Design.o  Player.o  PlayerLinkedList.o
+
+Condensed Project File.o:   Condensed Project File.cpp
+
+Design.o:   Design.cpp
+
+Hangman.main.o:   Hangman.main.cpp
+
+Player.o:   Player.h  Player.cpp
+
+PlayerLinkedList.o:    PlayerLinkedList.h  PlayerLinkedList.cpp
+
+
+clean:
+    rm Hangman.main Condensed Project File.o  Design.o  Player.o  PlayerLinkedList.o*.o
