@@ -6,16 +6,17 @@
 //IDE Used: cloud9 , Visual studio, code blocks
 //Cloud9 username: nathanj8
 //Cloud9 workspace name: happy_fun_coding_time
-//Cloud9 folder: 
-//Cloud9 C++ file: 
+//Cloud9 folder:
+//Cloud9 C++ file:
 //******************************************************************************
 #include <iostream>
-#include <string>       
+#include <string>
 #include <cctype>
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <time.h>
+#include <cstdlib>
 
 using namespace std;
 
@@ -166,7 +167,7 @@ string Design::LoadRandomWord(string path)
 	vector<string> v;
 
 	//get random word from external file
-	ifstream reader(path);
+	ifstream reader(path.c_str());
 	if (reader.is_open())
 	{
 		while (std::getline(reader, word))
@@ -214,7 +215,7 @@ public:
 	void addWins();                // update wins
 	void addLosses();              // update losses
 
-	//Accessor 
+	//Accessor
 	string getPlayerName();
 	int getWins();
 	int getLosses();
@@ -258,10 +259,10 @@ public:
 	void displayAllPlayers();
 
 
-	//Constructor 
+	//Constructor
 	PlayerList()
 	{
-		head = nullptr;
+		head = NULL;
 	}
 
 
@@ -269,7 +270,7 @@ public:
 
 };
 
-//Function Prototypes    
+//Function Prototypes
 void welcome();
 void goodbye();
 char YorN(char&);
@@ -314,6 +315,7 @@ int main()
 		}
 		do
 		{
+			system("cls");
 			//initiate game
 			game.PrintMessage("Hangman");
 			game.DrawHangman(tries);
@@ -349,7 +351,7 @@ int main()
 			cout << "\nThe word was : " << wordToGuess << endl << endl;
 
 		}
-		
+
 		PlayerRecords.displayPlayer(currentPlayer);
 
 		//play again? same player?
@@ -440,7 +442,7 @@ void Player::addLosses()
 	gamesLost++;
 }
 
-//Accessor 
+//Accessor
 string Player::getPlayerName()
 {
 	return playerName;
@@ -479,14 +481,14 @@ void Player::getAll()
 		<< "\nYour win rate is : " << getWinRate() << "%\n";
 }
 
-//PlayerList Class    
+//PlayerList Class
 //Mutators
 void PlayerList::insertNode(string tempPName)
 {
 	//declarations
 	PlayerNode *insNode;
 	PlayerNode *nodePtr;
-	PlayerNode *previousNode = nullptr;
+	PlayerNode *previousNode = NULL;
 
 	// Allocate a new node and store num there.
 	insNode = new PlayerNode;
@@ -498,7 +500,7 @@ void PlayerList::insertNode(string tempPName)
 	if (!head)
 	{
 		head = insNode;
-		insNode->next = nullptr;
+		insNode->next = NULL;
 		//insNode.cInfo.getAll();
 	}
 	else // Otherwise, insert insNode
@@ -507,10 +509,10 @@ void PlayerList::insertNode(string tempPName)
 		nodePtr = head;
 
 		// Initialize previousNode to nullptr.
-		previousNode = nullptr;
+		previousNode = NULL;
 
 		// Skip all nodes whose value is less than num.
-		while (nodePtr != nullptr && nodePtr->pInfo.getPlayerName() < insNode->pInfo.getPlayerName())
+		while (nodePtr != NULL && nodePtr->pInfo.getPlayerName() < insNode->pInfo.getPlayerName())
 		{
 			previousNode = nodePtr;
 			nodePtr = nodePtr->next;
@@ -518,7 +520,7 @@ void PlayerList::insertNode(string tempPName)
 
 		// If the new node is to be the 1st in the list,
 		// insert it before all other nodes.
-		if (previousNode == nullptr)
+		if (previousNode == NULL)
 		{
 			head = insNode;
 			insNode->next = nodePtr;
@@ -556,7 +558,7 @@ void PlayerList::incrementWins(string findName)
 
 		// Skip all nodes whose name member is
 		// not equal.
-		while (nodePtr != nullptr && nodePtr->pInfo.getPlayerName() != findName)
+		while (nodePtr != NULL && nodePtr->pInfo.getPlayerName() != findName)
 		{
 			previousNode = nodePtr;
 			nodePtr = nodePtr->next;
@@ -591,7 +593,7 @@ void PlayerList::incrementLosses(string findName)
 
 		// Skip all nodes whose name member is
 		// not equal.
-		while (nodePtr != nullptr && nodePtr->pInfo.getPlayerName() != findName)
+		while (nodePtr != NULL && nodePtr->pInfo.getPlayerName() != findName)
 		{
 			previousNode = nodePtr;
 			nodePtr = nodePtr->next;
@@ -626,7 +628,7 @@ void PlayerList::incrementGamesPlayed(string findName)
 
 		// Skip all nodes whose name member is
 		// not equal.
-		while (nodePtr != nullptr && nodePtr->pInfo.getPlayerName() != findName)
+		while (nodePtr != NULL && nodePtr->pInfo.getPlayerName() != findName)
 		{
 			previousNode = nodePtr;
 			nodePtr = nodePtr->next;
@@ -662,7 +664,7 @@ void PlayerList::displayPlayer(string findName)
 
 		// Skip all nodes whose name member is
 		// not equal.
-		while (nodePtr != nullptr && nodePtr->pInfo.getPlayerName() != findName)
+		while (nodePtr != NULL && nodePtr->pInfo.getPlayerName() != findName)
 		{
 			previousNode = nodePtr;
 			nodePtr = nodePtr->next;
@@ -681,7 +683,7 @@ void PlayerList::displayAllPlayers()
 	nodePtr = head;
 
 	//is list empty?
-	if (nodePtr == nullptr)
+	if (nodePtr == NULL)
 	{
 		cout << "No Players\n";
 	}
