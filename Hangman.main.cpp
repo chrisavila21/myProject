@@ -52,6 +52,11 @@ int main()
 		win = false;
 
 		wordToGuess = game.LoadRandomWord("BigWordFile.txt");
+		for (int i = 0; i < wordToGuess.length(); i++)
+		{
+			wordToGuess[i] = toupper(wordToGuess[i]);
+		}
+
 		if (wordToGuess == "-1")
 		{
 			cin.get();
@@ -69,7 +74,8 @@ int main()
 			if (win)
 				break;
 
-			cout << "guess a letter >> "; cin >> letter;
+			cout << "guess >> "; cin >> letter;
+			letter = toupper(letter);
 
 			if (guesses.find(letter) == string::npos)
 				guesses += letter;
